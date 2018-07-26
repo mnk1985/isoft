@@ -7,7 +7,7 @@ crontab command to generate summary (from previous day transactions):
 (result will be placed in storage/app/sum.txt)
 
 
-** :
+** some notes on what has not been done:
 - amount in float (it mat be not the best option for calculation)
-- time in server's local time
+- time in server's local time (don't take into account timezone)
 - no unit tests
