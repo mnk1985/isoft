@@ -3,7 +3,9 @@
 Implemented with laravel 5.6, tymon/jwt-auth, bosnadev/repositories
 
 Crontab command to generate summary (from previous day transactions):
+```console
 47 23 */2 * * php PATH_TO_LARAVEL_ROOT/artisan command:calculate-summary
+```
 (result will be placed in storage/app/sum.txt)
 (laravel command is located in App\Console\Commands)
 
