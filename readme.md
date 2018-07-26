@@ -8,6 +8,7 @@ git clone git@github.com:mnk1985/isoft.git isb-task
 cd isb-task
 composer install
 php artisan key:generate
+php artisan jwt:secret
 cp .env.example .env
 ```
 make sure to edit db settings in .env, and then run
