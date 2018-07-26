@@ -16,8 +16,8 @@ make sure to edit db settings in .env, and then run
 php artisan migrate
 php artisan server
 ```
-and now you can reach http://127.0.0.1:8000
-routes list is available with
+and now you can reach http://127.0.0.1:8000.
+List of routes is available with
 ```console
 php artisan route:list
 ```
