@@ -1,6 +1,6 @@
 
 
-Implemented with laravel 5.6, tymon/jwt-auth
+Implemented with laravel 5.6, tymon/jwt-auth, bosnadev/repositories
 
 Crontab command to generate summary (from previous day transactions):
 47 23 */2 * * php PATH_TO_LARAVEL_ROOT/artisan command:calculate-summary
@@ -11,4 +11,5 @@ Crontab command to generate summary (from previous day transactions):
 Some notes on what has not been done:
 - amount in float (it mat be not the best option for calculation)
 - time in server's local time (don't take into account timezone)
+- some specific Transaction repository queries are created with Eloquent, but not with Repository Criterias 
 - no unit tests
