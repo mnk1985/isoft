@@ -1,7 +1,6 @@
 ## Notes on implementation
 Implemented with laravel 5.6, tymon/jwt-auth, bosnadev/repositories
 
-
 ## How to run code
 ```console
 git clone git@github.com:mnk1985/isoft.git isb-task
@@ -31,7 +30,38 @@ php artisan route:list
 - App\Repositories - repositories (injected in controllers, autowired. Bindings are defined in App\Providers\AppServiceProvider)
 - App\Console\Commands - console commands
 
-## Crontab command
+### Models
+- User
+- Consumer (1 user has many customers)
+- Transaction (1 consumer has many transactions)
+
+### API endpoints
+User
+- api/auth/login (POST)
+- api/auth/logout (POST)
+- api/auth/me (POST)
+- api/auth/refresh (POST)
+
+Customer
+- api/customer (POST) - create customer
+
+Transaction
+- api/transaction (POST) - create transaction
+- api/transaction/{transactionId} (GET) - get transaction
+- api/transaction/{transactionId} (PATCH) - update transaction
+- api/transaction/{transactionId} (DELETE) - delete transaction
+- api/transactions (POST) - get transactions (with parameters to filter results)
+- api/transaction/{customerId}/{transactionId} (GET) - get transactions
+api/transactions/{customerId}/{amount?}/{date?}/{offset?}/{limit?} (GET) - get filtered transactions
+
+### GUI endpoints
+{HOST} - home page
+{HOST}/register - register page
+{HOST}/login - login page
+{HOST}/transactions - show all transactions which belong to customers, which in its turn belong to logged in user
+
+
+### Crontab command
 Crontab command to generate summary (from previous day transactions):
 ```console
 47 23 */2 * * php PATH_TO_LARAVEL_ROOT/artisan command:calculate-summary
