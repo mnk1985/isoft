@@ -70,8 +70,9 @@ Crontab command to generate summary (from previous day transactions):
 (laravel command is located in App\Console\Commands)
 
 
-## What has not been done:
-- amount in float (it mat be not the best option for calculation's accuracy)
+## What's not optimal and may be improved:
+- (transaction) amount is float value (it mat be not the best option for calculation's accuracy)
 - time in server's local time (so, user timezone is not taken into account)
-- some specific Transaction repository queries are created with Eloquent, but not with Repository Criterias 
-- no unit tests
+- some specific Transaction repository queries are created with Eloquent now, but it may be better (for more reusable, maintainable code) to do it with Repository Criterias 
+- create resources via repository, but may be better to do it via commands to conform CQRS 
+- no unit tests yet
