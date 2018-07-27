@@ -52,7 +52,7 @@ Transaction
 - api/transaction/{transactionId} (DELETE) - delete transaction
 - api/transactions (POST) - get transactions (with parameters to filter results)
 - api/transaction/{customerId}/{transactionId} (GET) - get transactions
-api/transactions/{customerId}/{amount?}/{date?}/{offset?}/{limit?} (GET) - get filtered transactions
+- api/transactions/{customerId}/{amount?}/{date?}/{offset?}/{limit?} (GET) - get filtered transactions
 
 ### GUI endpoints
 {HOST} - home page
